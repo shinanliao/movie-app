@@ -4,3 +4,4 @@ class ActorsController < ApplicationController
     render json: Actor.find_by(id: 6)
   end
 end
+  

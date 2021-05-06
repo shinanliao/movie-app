@@ -6,5 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Actor.create(first_name: "Chris", last_name: "Hemsworth", known_for: "Thor")
-Actor.create(first_name: "Tom", last_name: "Hiddleston", known_for: "Loki")
+Movie.create(title: "Hunt for the Wilderpeople", year: 2016, plot: "A boy and his foster father become the subjects of a manhunt after they get stranded in the New Zealand wilderness")
+Movie.create(title: "Stardust", year: 2007, plot: "To win the heart of his beloved, a young man ventures into the realm of fairies to retrieve a fallen star")
+Movie.create(title: "The Sound of Music", year: 1965, plot: "A heartwarming story that's based on the real life story of the Von Trapp Family singers, one of the world's best-known concert groups in the era immediately peceding WW2")
