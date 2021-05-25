@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
 
   def index
     movie = Movie.all.where("english" => :true)
-    render json: movie.as_json
+    render json: movie
   end
 
   def create
@@ -16,7 +16,7 @@ class MoviesController < ApplicationController
     english: params[:english]
     )
     if movie.save
-      render json: movie.as_json
+      render json: movie
     else
       render json: {errors: movie.errors.full_messages}, status: :unprocessable_entity
     end
@@ -24,7 +24,7 @@ class MoviesController < ApplicationController
 
   def show
     movie = Movie.find_by(id: params[:id])
-    render json: movie.as_json
+    render json: movie
   end
 
   def update
@@ -35,7 +35,7 @@ class MoviesController < ApplicationController
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
     if movie.save
-      render json: movie.as_json
+      render json: movie
     else
       render json: {errors: movie.errors.full_messages}, status: :unprocessable_entity
     end
